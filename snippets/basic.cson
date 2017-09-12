@@ -1,0 +1,100 @@
+'.source.cpp, .source.cc':
+
+  'Starting template for all the codechef problems':
+    'prefix': 'codechef'
+    'body': '''
+	#include <bits/stdc++.h>
+	#include <cstdio>
+	#include <cstring>
+	#include <cmath>
+	#include <cstring>
+	#include <chrono>
+	#include <complex>
+	#define endl "\\\\n"
+	#define ll long long int
+	#define vi vector<int>
+	#define vll vector<ll>
+	#define vvi vector < vi >
+	#define pii pair<int,int>
+	#define pll pair<long long, long long>
+	#define mod 1000000007
+	#define inf 1000000000000000001;
+	#define all(c) c.begin(),c.end()
+	#define mp(x,y) make_pair(x,y)
+	#define mem(a,val) memset(a,val,sizeof(a))
+	#define eb emplace_back
+	#define f first
+	#define s second
+
+	using namespace std;
+	int main()
+	{
+		std::ios::sync_with_stdio(false);
+		int T;
+		cin>>T;
+		// cin.ignore(); must be there when using getline(cin, s)
+		while(T--)
+		{
+
+		}
+		return 0;
+	}
+    '''
+
+  'Starting template for all the codejam problems':
+    'prefix': 'codejam'
+    'body': '''
+
+	#include <bits/stdc++.h>
+	#include <cstdio>
+	#include <cstring>
+	#include <cmath>
+	#include <cstring>
+	#include <chrono>
+	#include <complex>
+	#define endl "\\\\n"
+	#define ll long long int
+	#define vi vector<int>
+	#define vll vector<ll>
+	#define vvi vector < vi >
+	#define pii pair<int,int>
+	#define pll pair<long long, long long>
+	#define mod 1000000007
+	#define inf 1000000000000000001;
+	#define all(c) c.begin(),c.end()
+	#define mp(x,y) make_pair(x,y)
+	#define mem(a,val) memset(a,val,sizeof(a))
+	#define eb emplace_back
+	#define f first
+	#define s second
+
+	using namespace std;
+	int main()
+	{
+		ifstream fin;
+		ofstream fout;
+		fin.open("input");
+		fout.open("output");
+		int T;
+		fin>>T;
+		for(int t=1;t<=T;t++)
+		{
+			ll ans=0;
+			cout<<"Case #"<<t<<": "<<ans<<endl;
+		}
+		return 0;
+	}
+    '''
+
+  'To calculate time taken by a particular code to run':
+    'prefix': 'time'
+    'body': '''
+	std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
+	start = std::chrono::high_resolution_clock::now();
+	/*
+	Code goes here
+	*/
+	end = std::chrono::high_resolution_clock::now();
+	ll elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start).count();
+	cout << "\\\\nElapsed Time: " << elapsed_time << "ms\\\\n";
+    '''

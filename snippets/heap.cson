@@ -1,0 +1,13 @@
+'.source.cpp, .source.cc':
+
+  'max-heap using c++ stl':
+    'prefix': 'max-heap'
+    'body': '''
+	priority_queue < ll, std::vector<ll>, std::less<ll> > mxheap;	// mxheap.push(), mxheap.top(), mxheap.pop()
+    '''
+
+  'min-heap using c++ stl':
+    'prefix': 'min-heap'
+    'body': '''
+	priority_queue < ll, std::vector<ll>, std::greater<ll> > mnheap;	// mnheap.push(), mnheap.top(), mnheap.pop()
+    '''

@@ -1,0 +1,145 @@
+'.source.cpp, .source.cc':
+
+  'Depth First Search Algorithm':
+    'prefix': 'dfs'
+    'body': '''
+	void dfs(int x)
+	{
+		visited[x]=true;
+		for(auto& i : G[x])
+		{
+			if(visited[i]==false)
+			{
+				dfs(i);
+			}
+		}
+	}
+    '''
+
+  'Disjoint Set Union':
+    'prefix': 'dsu'
+    'body': '''
+	// Disjoint Set DataStructure
+	map< ll,ll > parent; 		// reserve space for map if n > 10000
+	map< ll,ll > urank;
+	void create(ll x)
+	{
+		parent[x] = x ;
+		urank[x] = 0 ; 		// rank = no. of nodes in its subtree
+	}
+	ll find(ll x)
+	{
+		if( parent[x] != x )	//path compression
+		{
+			parent[x] = find(parent[x]) ;
+		}
+		return parent[x];
+	}
+	void merge(ll x, ll y)
+	{
+		ll xroot = find(x);
+		ll yroot = find(y);
+		if( urank[xroot] <= urank[yroot] )	// Union by rank
+		{
+			parent[xroot] = yroot ;
+			urank[yroot] = urank[yroot] + urank[xroot] ;
+		}
+		else
+		{
+			parent[yroot] = xroot;
+			urank[xroot] = urank[xroot] + urank[yroot] ;
+		}
+	}
+    '''
+
+  'Euler Walk':
+    'prefix': 'ewalk'
+    'body': '''
+	// convert rooted tree to array
+	// 0 - white(not yet visited), 1- grey(currently being explored), 2-black(explored completely )
+	vector<int> color(MX+1);
+	vector<int> parent(MX+1);
+	int tt=0;
+	vector<int> tin(MX+1) ; 	// v was visited at tin[v] time
+	vector<int> tout(MX+1);		// v was left at tout[v] time
+	vector<int> vis(MX+1);		// at time tt, vis[tt] node was visited
+	void dfs(int v)
+	{
+		color[v] = 1 ;		// grey
+
+		vis[tt] = v ;
+		tin[v] = tt++ ;
+		for( auto& u : G[v] )
+		{
+			if ( color[u] == 0 )		// white
+			{
+				dfs(u) ;
+				parent[u] = v ;
+			}
+
+		}
+		tout[v] = tt ;
+
+		color[v] = 2 ;		// black
+	}
+	// vis is the array of the rooted tree
+    '''
+
+  'Starting template for all the graph problems':
+    'prefix': 'graph-starter'
+    'body': '''
+	#include <bits/stdc++.h>
+	#include <cstdio>
+	#include <cstring>
+	#include <cmath>
+	#include <cstring>
+	#include <complex>
+	#include <chrono>
+	#define endl "\\\\n"
+	#define ll long long int
+	#define vi vector<int>
+	#define vll vector<ll>
+	#define vvi vector < vi >
+	#define pii pair<int,int>
+	#define pll pair<long long, long long>
+	#define mod 1000000007
+	#define inf 1000000000000000001;
+	#define all(c) c.begin(),c.end()
+	#define mp(x,y) make_pair(x,y)
+	#define mem(a,val) memset(a,val,sizeof(a))
+	#define eb emplace_back
+	#define f first
+	#define s second
+
+	using namespace std;
+	const int MX = 100010;			// maximum no. of nodes in graph
+	vector<bool> visited(MX+1,0);
+	int n;
+	vector< vector<pair<int, ll>> > G(MX+1);		// adjacency list, (edge,cost) pair
+	int main()
+	{
+		std::ios::sync_with_stdio(false);
+		int T;
+		cin>>T;
+		while(T--)
+		{
+			for(int i=0; i<MX+1; i++)
+			{
+				G[i].clear();
+			}
+			fill(all(visited),0);
+			int m;					// no. of edges
+			cin>>n>>m;
+			for(int i = 1 ; i <= m ; i++)
+			{
+				int u,v;
+				ll c;
+				cin>>u>>v>>c;			// 1 based indexing of nodes
+
+				G[u].eb(v,c);
+				G[v].eb(u,c);
+			}
+		}
+		return 0;
+	}
+    '''
