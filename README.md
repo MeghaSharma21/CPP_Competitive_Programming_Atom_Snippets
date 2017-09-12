@@ -7,9 +7,9 @@ This repository provides extension for atom-text editor which enables atom users
 
 ## Installation
 
--For installation, go to Atom > Preferences...
--Then search for CPP Competitive Programming Snippets in Packages tab.
--Restart atom.
+- For installation, go to Atom > Preferences...
+- Then search for CPP Competitive Programming Snippets in Packages tab.
+- Restart atom.
 
 ## Usage
 
