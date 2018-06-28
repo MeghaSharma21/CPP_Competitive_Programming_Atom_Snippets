@@ -1,7 +1,8 @@
-# CPP_Competitive_Programming_Atom_Snippets
+# CPP: Competitive_Programming Atom Snippets
 A collection of code snippets for competitive programmers, written in C++ for atom editor.
+---
 
-Many times this happens in competitive programming competitions that you&#39;ve figured out an algorithm for the solution of the problem, which happens to be a standard algorithm. How helpful would it be to have snippets for commonly used concepts/algorithms in competitive programming in that situation, to provide you an edge over fellow competitors as using snippets will improve your accuracy, speed and hence rank!
+Many a times it happens in competitive programming competitions that you&#39;ve figured out an algorithm for the solution of the problem, which happens to be a standard algorithm. How helpful would it be to have snippets for the commonly used concepts/algorithms in that situation, to provide you an edge over the fellow competitors. Using snippets will improve your accuracy, speed and hence rank!
 
 This repository provides extension for atom-text editor which enables atom users to use c++ coding snippets of algorithms while doing competitive programming.
 
@@ -39,3 +40,7 @@ Following table contains all the snippets available in this package. It gives in
 | splitString.cpp | split-string | Split a c++ string by a delimiter |
 | suffixArray.cpp |  suffix-array | Suffix array and LCP array |
 | binarySearch.cpp | binary-search | Binary Search |
+| printVector.cpp | print-vector | Overload ostream operator << to print a vector for debugging |
+| printPair.cpp | print-pair | Overload ostream operator << to print a pair for debugging |
+| printSet.cpp | print-set | Overload ostream operator << to print a set for debugging |
+| printMap.cpp | print-map | Overload ostream operator << to print a map for debugging |
