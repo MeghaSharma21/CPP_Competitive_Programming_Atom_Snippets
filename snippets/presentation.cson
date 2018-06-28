@@ -1,0 +1,64 @@
+'.source.cpp, .source.cc':
+
+  'Overload << operator to print a vector for easy debugging':
+    'prefix': 'print-vector'
+    'body': '''
+		template <typename T>
+		ostream& operator<<(ostream& os, const vector<T>& v)
+		{
+			os << "[";
+			std::string delim = "";
+			for (int i = 0; i < v.size(); ++i) {
+				os << delim << v[i];
+				delim = ", ";
+			}
+			os << "]";
+			return os;
+		}
+    '''
+
+  'Overload << operator to print a set for easy debugging':
+    'prefix': 'print-set'
+    'body': '''
+		template <typename T>
+		ostream& operator<<(ostream& os, const set<T>& v)
+		{
+			os << "{";
+      std::string delim = "";
+			for (auto it : v) {
+				os << delim << it;
+        delim = ", ";
+			}
+			os << "}";
+			return os;
+		}
+    '''
+  'Overload << operator to print a pair for easy debugging':
+    'prefix': 'print-pair'
+    'body': '''
+		template <typename T, typename S>
+		ostream& operator<<(ostream& os, const pair<T, S>& v)
+		{
+			os << "(";
+			os << v.first << ", "
+			<< v.second << ")";
+			return os;
+		}
+    '''
+	
+  'Overload << operator to print a map  for easy debugging':
+    'prefix': 'print-map'
+    'body': '''
+		template <typename T, typename S>
+		ostream& operator<<(ostream& os, const map<T, S>& v)
+		{
+      std::string delim = "";
+			os << "{";
+			for (auto it : v){
+        os << delim <<  it.first << ":" << it.second;
+        delim = ", ";
+      }
+			os << "}";
+			return os;
+		}
+    '''
