@@ -4,21 +4,15 @@
     'prefix': 'codechef'
     'body': '''
 	#include <bits/stdc++.h>
-	#include <cstdio>
-	#include <cstring>
-	#include <cmath>
-	#include <cstring>
-	#include <chrono>
-	#include <complex>
 	#define endl "\\\\n"
-	#define ll long long int
-	#define vi vector<int>
-	#define vll vector<ll>
-	#define vvi vector < vi >
-	#define pii pair<int,int>
-	#define pll pair<long long, long long>
-	#define mod 1000000007
-	#define inf 1000000000000000001;
+	using ll = long long int;
+	using vi = vector<int>;
+	using vll = vector<ll>;
+	using vvi = vector < vi >;
+	using pii = pair<int,int>
+	using pll = pair<long long, long long>
+	const int mod=1000000007;
+	const ll inf=0x3f3fffffffff3fff;
 	#define all(c) c.begin(),c.end()
 	#define mp(x,y) make_pair(x,y)
 	#define mem(a,val) memset(a,val,sizeof(a))
@@ -29,7 +23,7 @@
 	using namespace std;
 	int main()
 	{
-		std::ios::sync_with_stdio(false);
+		std::ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
 		int T;
 		cin>>T;
 		// cin.ignore(); must be there when using getline(cin, s)
@@ -46,21 +40,15 @@
     'body': '''
 
 	#include <bits/stdc++.h>
-	#include <cstdio>
-	#include <cstring>
-	#include <cmath>
-	#include <cstring>
-	#include <chrono>
-	#include <complex>
 	#define endl "\\\\n"
-	#define ll long long int
-	#define vi vector<int>
-	#define vll vector<ll>
-	#define vvi vector < vi >
-	#define pii pair<int,int>
-	#define pll pair<long long, long long>
-	#define mod 1000000007
-	#define inf 1000000000000000001;
+	using ll = long long int;
+	using vi = vector<int>;
+	using vll = vector<ll>;
+	using vvi = vector < vi >;
+	using pii = pair<int,int>
+	using pll = pair<long long, long long>
+	const int mod=1000000007;
+	const ll inf=0x3f3fffffffff3fff;
 	#define all(c) c.begin(),c.end()
 	#define mp(x,y) make_pair(x,y)
 	#define mem(a,val) memset(a,val,sizeof(a))
